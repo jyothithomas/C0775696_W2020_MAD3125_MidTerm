@@ -146,38 +146,37 @@ public class PersonInfoActivity extends AppCompatActivity {
         }
         if(edtRRSP.getText().toString().isEmpty())
         {
-            edtRRSP.setError("Please enter your date of birth");
+            edtRRSP.setError("Please enter valid RRSP");
             Flag = true;
             return;
         }
-
+        if(edtDOB.getText().toString().isEmpty() == false)
+        {
+            boolean ageFlag = false;
+            if(calculateAge(edtDOB.getText().toString())<18) {
+                Flag = true;
+                ageFlag = true;
+                btnCalculate.setEnabled(false);
+                if (ageFlag) {
+                    new MaterialAlertDialogBuilder(PersonInfoActivity.this)
+                            .setTitle("You are below 18 years old. Not Eligible for Tax paying")
+                            .setMessage("Please enter a valid Birth date")
+                            .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+                                    dialog.dismiss();
+                                }
+                            })
+                            .show();
+                }
+                Flag = true;
+                return;
+            }
+        }
         if(!Flag)
         {
-            int ageFlag = 0;
-            if(calculateAge(edtDOB.getText().toString())<18)
-            {
-                ageFlag = 1;
-                btnCalculate.setEnabled(false);
-            }
-
-
             Double grossIncome = Double.parseDouble(edtGrossIncome.getText().toString());
             Double rrspContribution = Double.parseDouble(edtRRSP.getText().toString());
-            if(ageFlag == 1)
-            {
-                new MaterialAlertDialogBuilder(PersonInfoActivity.this)
-                        .setTitle("You are below 18 years old. Not Eligible for Tax paying")
-                        .setMessage("Please enter a valid Birth date")
-                        .setPositiveButton("OK", new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialog, int which) {
-                                dialog.dismiss();
-                            }
-                        })
-                        .show();
-            }
-            else
-            {
             CRACustomer craCustomer = new CRACustomer(edtSinNumber.getText().toString(),
                     edtFirstName.getText().toString(),edtLastName.getText().toString(),
                     edtDOB.getText().toString(),edtTaxFiledDate.toString(),Double.parseDouble(edtGrossIncome.getText().toString()),
@@ -188,7 +187,6 @@ public class PersonInfoActivity extends AppCompatActivity {
             mIntent.putExtra("age", getCurrentDate());
             mIntent.putExtra("filedDate",taxFiledDate);
             startActivity(mIntent);
-        }
         }
     }
     int calculateAge(String date){

@@ -165,14 +165,15 @@ public class PersonInfoActivity extends AppCompatActivity {
 
             Double grossIncome = Double.parseDouble(edtGrossIncome.getText().toString());
             Double rrspContribution = Double.parseDouble(edtRRSP.getText().toString());
+
             CRACustomer craCustomer = new CRACustomer(edtSinNumber.getText().toString(),
                     edtFirstName.getText().toString(),edtLastName.getText().toString(),
-                    edtDOB.getText().toString(),Double.parseDouble(edtGrossIncome.getText().toString()),
+                    edtDOB.getText().toString(),edtTaxFiledDate.toString(),Double.parseDouble(edtGrossIncome.getText().toString()),
                     Double.parseDouble(edtRRSP.getText().toString()));
             Intent mIntent = new Intent(PersonInfoActivity.this, DataDisplayActivity.class);
             mIntent.putExtra("CRACustomer", craCustomer);
             mIntent.putExtra("gender", gender);
-            mIntent.putExtra("curdate", getCurrentDate());
+            mIntent.putExtra("age", getCurrentDate());
             startActivity(mIntent);
         }
     }

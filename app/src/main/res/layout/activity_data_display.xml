@@ -5,9 +5,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
     tools:context=".DataDisplayActivity">
-
-        <androidx.core.widget.NestedScrollView
-        android:id="@+id/nestedScrollView"
+    <androidx.core.widget.NestedScrollView
         android:layout_width="409dp"
         android:layout_height="729dp"
         android:layout_marginStart="1dp"
@@ -20,7 +18,7 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0">
+        app:layout_constraintVertical_bias="0.0">
 
 
         <TableLayout
@@ -74,10 +72,10 @@
                     android:layout_height="wrap_content"
                     android:layout_column="2"
                     android:layout_marginLeft="10dp"
-                    android:padding="5dp"
                     android:textColor="#0C0C0C"
                     android:textSize="18dp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:padding="5dp" />
             </TableRow>
 
             <TableRow>
@@ -394,13 +392,4 @@
         </TableLayout>
 
     </androidx.core.widget.NestedScrollView>
-
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="113dp"
-        android:layout_height="79dp"
-        app:layout_constraintBottom_toBottomOf="@+id/nestedScrollView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/dollar" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -30,7 +30,7 @@
                     android:id="@+id/txtSinNumber"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="60dp"
+                    android:layout_marginTop="20dp"
                     android:ems="10"
                     android:hint="Enter Sin Number "
                     android:inputType="textPersonName"
@@ -86,16 +86,6 @@
                         android:layout_height="wrap_content"
                         android:text="Other" />
                 </RadioGroup>
-
-                <TextView
-                    android:id="@+id/txtAge"
-                    android:layout_width="196dp"
-                    android:layout_height="46dp"
-                    android:layout_below="@+id/txtFirstName"
-                    android:layout_toRightOf="@+id/txtBirthDate"
-                    android:ems="10"
-                    android:text="Age"
-                    android:textSize="20dp" />
 
                 <TextView
                     android:id="@+id/lblTaxFillDate"

@@ -168,37 +168,18 @@ public class PersonInfoActivity extends AppCompatActivity {
 //        }
         if(!Flag)
         {
-            int ageFlag = 0;
-            if(calculateAge(edtDOB.getText().toString())<= 18)
-            {
-                ageFlag = 1;
-                btnCalculate.setEnabled(false);
-                new MaterialAlertDialogBuilder(PersonInfoActivity.this)
-                        .setTitle("You are below 18 years old. Not Eligible for Tax paying")
-                        .setMessage("Please enter a valid Birth date")
-                        .setPositiveButton("OK", new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialog, int which) {
-                                dialog.dismiss();
-                            }
-                        })
-                        .show();
-                return;
-            }
-            if(ageFlag == 0) {
-                Double grossIncome = Double.parseDouble(edtGrossIncome.getText().toString());
-                Double rrspContribution = Double.parseDouble(edtRRSP.getText().toString());
-                CRACustomer craCustomer = new CRACustomer(edtSinNumber.getText().toString(),
-                        edtFirstName.getText().toString(), edtLastName.getText().toString(),
-                        edtDOB.getText().toString(), edtTaxFiledDate.toString(), Double.parseDouble(edtGrossIncome.getText().toString()),
-                        Double.parseDouble(edtRRSP.getText().toString()));
-                Intent mIntent = new Intent(PersonInfoActivity.this, DataDisplayActivity.class);
-                mIntent.putExtra("CRACustomer", craCustomer);
-                mIntent.putExtra("gender", gender);
-                mIntent.putExtra("age", getCurrentDate());
-                mIntent.putExtra("filedDate", taxFiledDate);
-                startActivity(mIntent);
-            }
+            Double grossIncome = Double.parseDouble(edtGrossIncome.getText().toString());
+            Double rrspContribution = Double.parseDouble(edtRRSP.getText().toString());
+            CRACustomer craCustomer = new CRACustomer(edtSinNumber.getText().toString(),
+                    edtFirstName.getText().toString(),edtLastName.getText().toString(),
+                    edtDOB.getText().toString(),edtTaxFiledDate.toString(),Double.parseDouble(edtGrossIncome.getText().toString()),
+                    Double.parseDouble(edtRRSP.getText().toString()));
+            Intent mIntent = new Intent(PersonInfoActivity.this, DataDisplayActivity.class);
+            mIntent.putExtra("CRACustomer", craCustomer);
+            mIntent.putExtra("gender", gender);
+            mIntent.putExtra("age", getCurrentDate());
+            mIntent.putExtra("filedDate",taxFiledDate);
+            startActivity(mIntent);
         }
     }
     int calculateAge(String date){

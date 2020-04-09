@@ -58,7 +58,7 @@ public class CRACustomer implements Parcelable {
     }
 
     public String getFull_name() {
-        return getFirstName()+getLastName();
+        return firstName+lastName;
     }
 
     public void setFull_name(String full_name) {
@@ -157,7 +157,6 @@ public class CRACustomer implements Parcelable {
         sinNumber = parcel.readString();
         firstName = parcel.readString();
         lastName = parcel.readString();
-        fullName = parcel.readString();
         personGender = parcel.readString();
         provTax = parcel.readDouble();
         fedTax = parcel.readDouble();
@@ -192,7 +191,6 @@ public class CRACustomer implements Parcelable {
         dest.writeString(sinNumber);
         dest.writeString(firstName);
         dest.writeString(lastName);
-        dest.writeString(fullName);
         dest.writeString(personGender);
         dest.writeDouble(fedTax);
         dest.writeDouble(provTax);

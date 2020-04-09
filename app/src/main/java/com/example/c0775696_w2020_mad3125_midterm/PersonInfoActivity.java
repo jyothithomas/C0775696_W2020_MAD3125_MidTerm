@@ -134,7 +134,7 @@ public class PersonInfoActivity extends AppCompatActivity {
         }
         if(edtLastName.getText().toString().isEmpty())
         {
-            edtLastName.setError("Please enter your date of birth");
+            edtLastName.setError("Please enter your Last Name");
             Flag = true;
             return;
         }
@@ -163,10 +163,8 @@ public class PersonInfoActivity extends AppCompatActivity {
             Double grossIncome = Double.parseDouble(edtGrossIncome.getText().toString());
             Double rrspContribution = Double.parseDouble(edtRRSP.getText().toString());
             CRACustomer craCustomer = new CRACustomer(edtSinNumber.getText().toString(),
-                    edtFirstName.getText().toString(),
-                    edtLastName.getText().toString(),
-                    edtDOB.getText().toString(),
-                    Double.parseDouble(edtGrossIncome.getText().toString()),
+                    edtFirstName.getText().toString(),edtLastName.getText().toString(),
+                    edtDOB.getText().toString(),Double.parseDouble(edtGrossIncome.getText().toString()),
                     Double.parseDouble(edtRRSP.getText().toString()));
             Intent mIntent = new Intent(PersonInfoActivity.this, DataDisplayActivity.class);
             mIntent.putExtra("CRACustomer", craCustomer);

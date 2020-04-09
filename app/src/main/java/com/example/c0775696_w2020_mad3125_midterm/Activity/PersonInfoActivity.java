@@ -150,6 +150,11 @@ public class PersonInfoActivity extends AppCompatActivity {
             Flag = true;
             return;
         }
+        if(!validateSinNumber(edtSinNumber.getText().toString()))
+        {
+
+            edtSinNumber.setError("Enter a valid SIN number");
+        }
 //        if(calculateAge(edtDOB.getText().toString())<= 18)
 //        {
 //                btnCalculate.setEnabled(false);
@@ -206,7 +211,6 @@ public class PersonInfoActivity extends AppCompatActivity {
                 && today.get(Calendar.DAY_OF_MONTH) < picker.getDatePicker().getYear()) {
             age--;
         }
-        //todaydate.append("Age: ");
         todaydate.append(String.valueOf(age));
         if(age < 18)
         {
@@ -228,6 +232,21 @@ public class PersonInfoActivity extends AppCompatActivity {
     }
     Date date=java.util.Calendar.getInstance().getTime();
     String taxFiledDate = date.toString();
+
+    public boolean validateSinNumber(String s)
+    {
+        int n = 0;
+        if(edtSinNumber.getText().toString().matches("^(\\d{3}-\\d{3}-\\d{3})|(\\d{9})$"))
+        {
+            n = 1;
+            return true;
+        }
+        if(n == 0)
+        {
+            return false;
+        }
+        return true;
+    }
     }
 
 

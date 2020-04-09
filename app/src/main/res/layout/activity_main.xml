@@ -123,7 +123,8 @@
                     android:layout_below="@+id/txtGrossIncome"
                     android:drawableLeft="@drawable/ic_action_name"
                     android:ems="10"
-                    android:hint="Enter RRSP Contributed" />
+                    android:hint="Enter RRSP Contributed"
+                    android:inputType="numberDecimal" />
 
                 <Button
                     android:id="@+id/btnCalculate"

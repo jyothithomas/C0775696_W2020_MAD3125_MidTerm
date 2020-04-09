@@ -192,6 +192,7 @@
                     android:layout_height="wrap_content"
                     android:layout_column="2"
                     android:layout_marginLeft="10dp"
+                    android:drawableLeft="@drawable/ic_action_name"
                     android:padding="5dp"
                     android:textColor="#0C0C0C"
                     android:textSize="18dp"
@@ -212,10 +213,11 @@
 
                 <TextView
                     android:id="@+id/lblFederalTax"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
                     android:layout_column="2"
                     android:layout_marginLeft="10dp"
+                    android:drawableLeft="@drawable/ic_action_name"
                     android:padding="5dp"
                     android:textColor="#0C0C0C"
                     android:textSize="18dp"
@@ -240,6 +242,7 @@
                     android:layout_height="wrap_content"
                     android:layout_column="2"
                     android:layout_marginLeft="10dp"
+                    android:drawableLeft="@drawable/ic_action_name"
                     android:padding="5dp"
                     android:textColor="#0C0C0C"
                     android:textSize="18dp"
@@ -264,6 +267,7 @@
                     android:layout_height="wrap_content"
                     android:layout_column="2"
                     android:layout_marginLeft="10dp"
+                    android:drawableLeft="@drawable/ic_action_name"
                     android:padding="5dp"
                     android:textColor="#0C0C0C"
                     android:textSize="18dp"
@@ -288,6 +292,7 @@
                     android:layout_height="wrap_content"
                     android:layout_column="2"
                     android:layout_marginLeft="10dp"
+                    android:drawableLeft="@drawable/ic_action_name"
                     android:padding="5dp"
                     android:textColor="#0C0C0C"
                     android:textSize="18dp"
@@ -312,6 +317,7 @@
                     android:layout_height="wrap_content"
                     android:layout_column="2"
                     android:layout_marginLeft="10dp"
+                    android:drawableLeft="@drawable/ic_action_name"
                     android:padding="5dp"
                     android:textColor="#0C0C0C"
                     android:textSize="18dp"
@@ -336,6 +342,7 @@
                     android:layout_height="wrap_content"
                     android:layout_column="2"
                     android:layout_marginLeft="10dp"
+                    android:drawableLeft="@drawable/ic_action_name"
                     android:padding="5dp"
                     android:textColor="#0C0C0C"
                     android:textSize="18dp"
@@ -360,9 +367,10 @@
                     android:layout_height="wrap_content"
                     android:layout_column="2"
                     android:layout_marginLeft="10dp"
+                    android:drawableLeft="@drawable/ic_action_name"
                     android:padding="5dp"
                     android:textColor="#0C0C0C"
-                    android:textSize="18dp"
+                    android:textSize="22dp"
                     android:textStyle="bold" />
             </TableRow>
 
@@ -384,9 +392,10 @@
                     android:layout_height="wrap_content"
                     android:layout_column="2"
                     android:layout_marginLeft="10dp"
+                    android:drawableLeft="@drawable/ic_action_name"
                     android:padding="5dp"
                     android:textColor="#0C0C0C"
-                    android:textSize="18dp"
+                    android:textSize="22dp"
                     android:textStyle="bold" />
             </TableRow>
         </TableLayout>

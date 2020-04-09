@@ -9,6 +9,8 @@ import android.widget.TextView;
 
 import com.example.c0775696_w2020_mad3125_midterm.CRACustomer;
 
+import java.util.Date;
+
 public class DataDisplayActivity extends AppCompatActivity {
     CRACustomer customer;
     private TextView lblSin,lblFullName,lblBirthDate,lblAge,lblGender;
@@ -45,7 +47,7 @@ public class DataDisplayActivity extends AppCompatActivity {
         lblFullName.setText( customer.getFull_name());
         lblGender.setText(getIntent().getStringExtra("gender"));
         lblAge.setText(getIntent().getStringExtra("age"));
-        //lblTaxFilingDate.setText(getIntent(java.time.LocalDate.now()));
+        lblTaxFilingDate.setText(getIntent().getStringExtra("filedDate"));
         lblGrossIncome.setText(String.valueOf(customer.getGrossIncome()));
         lblRRSPContributed.setText(String.valueOf(customer.getRrspContribution()));
 

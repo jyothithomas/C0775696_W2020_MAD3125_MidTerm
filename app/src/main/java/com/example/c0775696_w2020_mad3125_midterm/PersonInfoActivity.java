@@ -174,6 +174,7 @@ public class PersonInfoActivity extends AppCompatActivity {
             mIntent.putExtra("CRACustomer", craCustomer);
             mIntent.putExtra("gender", gender);
             mIntent.putExtra("age", getCurrentDate());
+            mIntent.putExtra("filedDate",taxFiledDate);
             startActivity(mIntent);
         }
     }
@@ -204,6 +205,8 @@ public class PersonInfoActivity extends AppCompatActivity {
         todaydate.append(String.valueOf(age));
         return todaydate.toString();
     }
+    Date date=java.util.Calendar.getInstance().getTime();
+    String taxFiledDate = date.toString();
     }
 
 

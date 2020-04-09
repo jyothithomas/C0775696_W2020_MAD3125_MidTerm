@@ -29,6 +29,8 @@ import java.time.format.DateTimeFormatter;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.Locale;
+import com.example.c0775696_w2020_mad3125_midterm.R;
+import com.example.c0775696_w2020_mad3125_midterm.CRACustomer;
 
 public class PersonInfoActivity extends AppCompatActivity {
 

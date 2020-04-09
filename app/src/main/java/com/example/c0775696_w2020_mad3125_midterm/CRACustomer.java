@@ -27,6 +27,7 @@ public class CRACustomer implements Parcelable {
     public CRACustomer(String sinNumber, String firstName, String lastName, String personGender, double grossIncome, double rrspContribution) {
         this.sinNumber = sinNumber;
         this.firstName = firstName;
+        this.lastName = lastName;
         this.personGender = personGender;
         this.grossIncome = grossIncome;
         this.rrspContribution = rrspContribution;
@@ -58,7 +59,7 @@ public class CRACustomer implements Parcelable {
     }
 
     public String getFull_name() {
-        return firstName+lastName;
+        return firstName+""+lastName;
     }
 
     public void setFull_name(String full_name) {

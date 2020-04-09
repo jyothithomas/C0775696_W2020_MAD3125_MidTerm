@@ -20,6 +20,7 @@ public class DataDisplayActivity extends AppCompatActivity {
     private TextView lblTaxFilingDate,lblGrossIncome,lblRRSPContributed,lblRRSPCarryFwd;
     private TextView lblFederalTax,lblProvincialTax,lblEI,lblCpp,lblTaxableIncome,lblTaxPayed;
 
+    int minAge = 18;
     double cpp = 0, ei = 0;
     double rrsp = 0, rrspContribution = 0, rrspCarryFwd = 0;
     double taxableIncome, federalTax, provincialTax, totalTaxPaid;

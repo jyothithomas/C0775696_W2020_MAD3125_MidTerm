@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.core.widget.NestedScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:theme="@style/Theme.MaterialComponents.DayNight.DarkActionBar"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -18,16 +19,20 @@
             android:layout_marginStart="8dp"
             android:layout_marginEnd="102dp"
             android:layout_marginBottom="1200dp"
-            android:text="YOUR TAX SUMMARY"
+            android:requiresFadingEdge="horizontal"
+            android:text="Tax Details"
+            android:textAlignment="center"
             android:textColor="@color/colorPrimary"
             android:textColorHighlight="#00FFFFFF"
             android:textColorHint="#00FFFFFF"
             android:textColorLink="#00FFFFFF"
-            android:textSize="26sp"
+            android:textSize="22sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.697"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.898" />
 
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/txtfullName"
@@ -37,16 +42,14 @@
             android:layout_marginTop="20dp"
             android:layout_marginEnd="12dp"
             android:layout_marginBottom="760dp"
-            android:background="@color/colorPrimary"
-            android:backgroundTint="@color/colorPrimary"
-            android:text="FULL NAME"
+            android:text="Full Name:"
             android:textColor="#000000"
             android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
-        
+
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/txtBirthDate"
             android:layout_width="0dp"
@@ -55,9 +58,7 @@
             android:layout_marginTop="225dp"
             android:layout_marginEnd="12dp"
             android:layout_marginBottom="899dp"
-            android:background="@color/colorPrimary"
-            android:backgroundTint="@color/colorPrimary"
-            android:text="BIRTH DATE"
+            android:text="Birth Date:"
             android:textColor="#000000"
             android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -73,10 +74,7 @@
             android:layout_marginTop="339dp"
             android:layout_marginEnd="12dp"
             android:layout_marginBottom="948dp"
-            android:background="@color/colorPrimary"
-            android:backgroundTint="@color/colorPrimary"
-            android:shadowColor="#0E0000"
-            android:text="GENDER"
+            android:text="Gender"
             android:textColor="#000000"
             android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -93,9 +91,7 @@
             android:layout_marginTop="373dp"
             android:layout_marginEnd="12dp"
             android:layout_marginBottom="917dp"
-            android:background="@color/colorPrimary"
-            android:backgroundTint="@color/colorPrimary"
-            android:text="AGE"
+            android:text="Age:"
             android:textColor="#000000"
             android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -112,9 +108,7 @@
             android:layout_marginTop="450dp"
             android:layout_marginEnd="12dp"
             android:layout_marginBottom="842dp"
-            android:background="@color/colorPrimary"
-            android:backgroundTint="@color/colorPrimary"
-            android:text="GROSS INCOME"
+            android:text="Gross Income:"
             android:textColor="#000000"
             android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -123,6 +117,155 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txtSinNumber"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginBottom="8dp"
+            android:text="SIN:"
+            android:textColor="#000000"
+            android:textSize="22sp"
+            app:layout_constraintBottom_toTopOf="@+id/txtGrossIncome"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtAge"
+            app:layout_constraintVertical_bias="1.0" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txtFederalTax"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="480dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginBottom="808dp"
+            android:text="FEDERAL TAX"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txtProvincialTax"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="482dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginBottom="745dp"
+            android:text="PROVINCIAL TAX"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txtCPP"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="482dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginBottom="682dp"
+            android:text="CPP"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txtEI"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="482dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginBottom="618dp"
+            android:text="EI"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txtCarryForward"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="482dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginBottom="555dp"
+            android:text="CARRY FORWARD RRSP"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txtTotalTaxIncome"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="555dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginBottom="490dp"
+            android:text="TOTAL TAXABLE INCOME"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txtTaxPayed"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="555dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginBottom="425dp"
+            android:text="TOTAL TAX"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="112dp"
+            android:layout_height="100dp"
+            android:layout_marginBottom="52dp"
+            app:layout_constraintBottom_toTopOf="@+id/txtfullName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.474"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textView6"
+            app:layout_constraintVertical_bias="1.0"
+            app:srcCompat="@drawable/dollar" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.core.widget.NestedScrollView>

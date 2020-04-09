@@ -1,4 +1,4 @@
-package com.example.c0775696_w2020_mad3125_midterm;
+package com.example.c0775696_w2020_mad3125_midterm.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,9 +7,8 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.widget.TextView;
 
-import com.example.c0775696_w2020_mad3125_midterm.CRACustomer;
-
-import java.util.Date;
+import com.example.c0775696_w2020_mad3125_midterm.Models.CRACustomer;
+import com.example.c0775696_w2020_mad3125_midterm.R;
 
 public class DataDisplayActivity extends AppCompatActivity {
     CRACustomer customer;

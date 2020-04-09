@@ -1,4 +1,4 @@
-package com.example.c0775696_w2020_mad3125_midterm;
+package com.example.c0775696_w2020_mad3125_midterm.Models;
 
 import android.os.Parcel;
 import android.os.Parcelable;

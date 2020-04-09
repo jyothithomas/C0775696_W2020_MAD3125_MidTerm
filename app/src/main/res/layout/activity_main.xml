@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="#F5F8F8"
-        tools:context=".MainActivity">
+        tools:context=".PersonInfoActivity">
 
         <TextView
             android:id="@+id/textView"
@@ -136,7 +136,7 @@
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/edtSinnumber"
             android:layout_width="271dp"
-            android:layout_height="32dp"
+            android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginTop="32dp"
             android:layout_marginEnd="16dp"
@@ -162,11 +162,12 @@
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/edtGrossIncome"
             android:layout_width="271dp"
-            android:layout_height="32dp"
+            android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginTop="28dp"
             android:layout_marginEnd="16dp"
             android:drawableLeft="@drawable/ic_action_name"
+            android:fontFamily="sans-serif-condensed"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toEndOf="@+id/textView5"
@@ -225,7 +226,7 @@
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/edtRRsp"
             android:layout_width="223dp"
-            android:layout_height="29dp"
+            android:layout_height="wrap_content"
             android:layout_marginTop="92dp"
             android:layout_marginEnd="12dp"
             android:drawableLeft="@drawable/ic_action_name"

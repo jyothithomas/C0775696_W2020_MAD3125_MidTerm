@@ -45,8 +45,11 @@ public class DataDisplayActivity extends AppCompatActivity {
         lblSin.setText( customer.getSinNumber());
         lblFullName.setText( customer.getFull_name());
         lblGender.setText(getIntent().getStringExtra("gender"));
+        lblTaxFilingDate.setText(getIntent().getStringExtra("date"));
         lblGrossIncome.setText(String.valueOf(customer.getGrossIncome()));
         lblRRSPContributed.setText(String.valueOf(customer.getRrspContribution()));
+
+        //lblTaxFilingDate.getText().toString() = date;
         // Cpp Calculation
         double grossIncome = customer.getGrossIncome();
         if(grossIncome > 57400.00){

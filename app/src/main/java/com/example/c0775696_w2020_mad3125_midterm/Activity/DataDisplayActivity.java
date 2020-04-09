@@ -11,6 +11,7 @@ import com.example.c0775696_w2020_mad3125_midterm.Models.CRACustomer;
 import com.example.c0775696_w2020_mad3125_midterm.R;
 
 import java.util.Calendar;
+import java.util.Date;
 
 public class DataDisplayActivity extends AppCompatActivity {
     CRACustomer customer;
@@ -22,6 +23,7 @@ public class DataDisplayActivity extends AppCompatActivity {
     double rrsp = 0, rrspContribution = 0, rrspCarryFwd = 0;
     double taxableIncome, federalTax, provincialTax, totalTaxPaid;
 
+    String dt;
     final Calendar calendar = Calendar.getInstance();
     final int day = calendar.get(Calendar.DAY_OF_MONTH);
     final   int month = calendar.get(Calendar.MONTH);
@@ -46,7 +48,11 @@ public class DataDisplayActivity extends AppCompatActivity {
         lblTaxableIncome = findViewById(R.id.lblTotalTaxIncome);
         lblTaxPayed = findViewById(R.id.lblTaxPayed);
 
-       lblTaxFilingDate.setText(new StringBuilder().append(day).append(" ").append("-").append(month + 1).append("-").append(year));
+        lblTaxFilingDate.setText(new StringBuilder()
+                // Month is 0 based, just add 1
+                .append(year).append(" ").append("-").append(month + 1).append("-")
+                .append(day));
+       //lblTaxFilingDate.setText(new StringBuilder().append(day).append(" ").append("-").append(month + 1).append("-").append(year));
 
         Intent mIntent = getIntent();
         CRACustomer customer = mIntent.getParcelableExtra("CRACustomer");

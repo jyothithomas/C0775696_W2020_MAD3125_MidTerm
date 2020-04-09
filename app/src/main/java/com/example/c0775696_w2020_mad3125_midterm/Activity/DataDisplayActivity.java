@@ -10,6 +10,8 @@ import android.widget.TextView;
 import com.example.c0775696_w2020_mad3125_midterm.Models.CRACustomer;
 import com.example.c0775696_w2020_mad3125_midterm.R;
 
+import java.util.Calendar;
+
 public class DataDisplayActivity extends AppCompatActivity {
     CRACustomer customer;
     private TextView lblSin,lblFullName,lblBirthDate,lblAge,lblGender;
@@ -19,6 +21,11 @@ public class DataDisplayActivity extends AppCompatActivity {
     double cpp = 0, ei = 0;
     double rrsp = 0, rrspContribution = 0, rrspCarryFwd = 0;
     double taxableIncome, federalTax, provincialTax, totalTaxPaid;
+
+    final Calendar calendar = Calendar.getInstance();
+    final int day = calendar.get(Calendar.DAY_OF_MONTH);
+    final   int month = calendar.get(Calendar.MONTH);
+    final int year = calendar.get(Calendar.YEAR);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,7 +53,9 @@ public class DataDisplayActivity extends AppCompatActivity {
         lblFullName.setText( customer.getFull_name());
         lblGender.setText(getIntent().getStringExtra("gender"));
         lblAge.setText(getIntent().getStringExtra("age"));
-        //lblTaxFilingDate.setText(getIntent().getStringExtra("filedDate"));
+        lblTaxFilingDate.setText(new StringBuilder()
+                .append(day).append(" ").append("-").append(month + 1).append("-")
+                .append(year));
         lblGrossIncome.setText(String.valueOf(customer.getGrossIncome()));
         lblRRSPContributed.setText(String.valueOf(customer.getRrspContribution()));
 

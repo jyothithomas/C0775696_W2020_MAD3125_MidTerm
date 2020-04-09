@@ -154,6 +154,8 @@ public class PersonInfoActivity extends AppCompatActivity {
         {
 
             edtSinNumber.setError("Enter a valid SIN number");
+            Flag = true;
+            return;
         }
 //        if(calculateAge(edtDOB.getText().toString())<= 18)
 //        {

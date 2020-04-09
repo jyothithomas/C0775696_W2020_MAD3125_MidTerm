@@ -65,16 +65,9 @@ public class DataDisplayActivity extends AppCompatActivity {
         lblEI.setText(String.format("%.2f", ei));
 
         // RRSP Calculation
-       // rrsp = customer.getRrspContribution();
+        rrsp = customer.getRrspContribution();
         double maxRRSP = (grossIncome * 0.18); //18%
-        if(maxRRSP < rrspContribution) {
-            rrsp = customer.getRrspContribution();
-        }
-        else if(maxRRSP> rrspContribution)
-        {
-            rrsp = maxRRSP;
-        }
-
+        rrsp = customer.getRrspContribution();
         rrspCarryFwd = maxRRSP - rrsp ;
 
         if(rrspCarryFwd < 0)
@@ -88,7 +81,15 @@ public class DataDisplayActivity extends AppCompatActivity {
         }
 
         //Taxable income Calculation
-        taxableIncome = grossIncome - (cpp + ei + rrsp);
+        if(maxRRSP<rrsp)
+        {
+            taxableIncome = grossIncome - (cpp + ei + maxRRSP);
+        }
+        else if(maxRRSP>rrsp)
+        {
+            taxableIncome = grossIncome - (cpp + ei + rrsp);
+        }
+
         lblTaxableIncome.setText(String.format("%.2f",taxableIncome));
 
         //Federal tax Calculation

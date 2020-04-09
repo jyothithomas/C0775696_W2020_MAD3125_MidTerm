@@ -152,27 +152,19 @@ public class PersonInfoActivity extends AppCompatActivity {
         }
         if(!validateSinNumber(edtSinNumber.getText().toString()))
         {
-
             edtSinNumber.setError("Enter a valid SIN number");
             Flag = true;
             return;
         }
-//        if(calculateAge(edtDOB.getText().toString())<= 18)
-//        {
-//                btnCalculate.setEnabled(false);
-//                    new MaterialAlertDialogBuilder(PersonInfoActivity.this)
-//                            .setTitle("You are below 18 years old. Not Eligible for Tax paying")
-//                            .setMessage("Please enter a valid Birth date")
-//                            .setPositiveButton("OK", new DialogInterface.OnClickListener() {
-//                                @Override
-//                                public void onClick(DialogInterface dialog, int which) {
-//                                    dialog.dismiss();
-//                                }
-//                            })
-//                            .show();
-//                Flag = true;
-//                return;
-//        }
+
+        /*if(calculateAge(edtDOB.getText().toString().e)
+        {
+                btnCalculate.setEnabled(false);
+                edtDOB.setError("");
+            Flag = true;
+            return;
+        }*/
+
         if(!Flag)
         {
             Double grossIncome = Double.parseDouble(edtGrossIncome.getText().toString());
@@ -227,7 +219,7 @@ public class PersonInfoActivity extends AppCompatActivity {
                                }
                            })
                            .show();
-                    return null;
+
 
         }
         return todaydate.toString();

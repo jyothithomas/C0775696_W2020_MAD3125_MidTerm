@@ -181,8 +181,6 @@ public class PersonInfoActivity extends AppCompatActivity {
                 mIntent.putExtra("age", getCurrentDate());
                 mIntent.putExtra("filedDate",taxFiledDate);
                 startActivity(mIntent);
-
-
         }
     }
     int calculateAge(String date){
@@ -210,6 +208,22 @@ public class PersonInfoActivity extends AppCompatActivity {
         }
         //todaydate.append("Age: ");
         todaydate.append(String.valueOf(age));
+        if(age < 18)
+        {
+            btnCalculate.setEnabled(false);
+                    new MaterialAlertDialogBuilder(PersonInfoActivity.this)
+                           .setTitle("You are below 18 years old. Not Eligible for Tax paying")
+                            .setMessage("Please enter a valid Birth date")
+                            .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                               @Override
+                               public void onClick(DialogInterface dialog, int which) {
+                                   dialog.dismiss();
+                               }
+                           })
+                           .show();
+                    return null;
+
+        }
         return todaydate.toString();
     }
     Date date=java.util.Calendar.getInstance().getTime();

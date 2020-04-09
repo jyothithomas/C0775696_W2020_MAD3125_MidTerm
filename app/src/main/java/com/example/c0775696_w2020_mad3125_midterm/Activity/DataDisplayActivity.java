@@ -2,6 +2,7 @@ package com.example.c0775696_w2020_mad3125_midterm.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -9,6 +10,7 @@ import android.widget.TextView;
 
 import com.example.c0775696_w2020_mad3125_midterm.Models.CRACustomer;
 import com.example.c0775696_w2020_mad3125_midterm.R;
+import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -65,6 +67,19 @@ public class DataDisplayActivity extends AppCompatActivity {
         lblFullName.setText( customer.getFull_name());
         lblGender.setText(getIntent().getStringExtra("gender"));
         lblAge.setText(getIntent().getStringExtra("age"));
+        if(lblAge == null)
+        {
+            new MaterialAlertDialogBuilder(DataDisplayActivity.this)
+                    .setTitle("You are below 18 years old. Not Eligible for Tax paying")
+                    .setMessage("Please enter a valid Birth date")
+                    .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            dialog.dismiss();
+                        }
+                    })
+                    .show();
+        }
         lblGrossIncome.setText(String.valueOf(customer.getGrossIncome()));
         lblRRSPContributed.setText(String.valueOf(customer.getRrspContribution()));
 

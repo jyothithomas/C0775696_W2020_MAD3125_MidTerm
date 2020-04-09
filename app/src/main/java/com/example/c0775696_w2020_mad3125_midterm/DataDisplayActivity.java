@@ -47,7 +47,7 @@ public class DataDisplayActivity extends AppCompatActivity {
         lblFullName.setText( customer.getFull_name());
         lblGender.setText(getIntent().getStringExtra("gender"));
         lblAge.setText(getIntent().getStringExtra("age"));
-        lblTaxFilingDate.setText(getIntent().getStringExtra("filedDate"));
+        //lblTaxFilingDate.setText(getIntent().getStringExtra("filedDate"));
         lblGrossIncome.setText(String.valueOf(customer.getGrossIncome()));
         lblRRSPContributed.setText(String.valueOf(customer.getRrspContribution()));
 

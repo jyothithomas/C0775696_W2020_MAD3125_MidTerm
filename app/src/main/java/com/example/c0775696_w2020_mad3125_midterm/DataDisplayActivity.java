@@ -65,8 +65,15 @@ public class DataDisplayActivity extends AppCompatActivity {
         lblEI.setText(String.format("%.2f", ei));
 
         // RRSP Calculation
-        rrsp = customer.getRrspContribution();
+       // rrsp = customer.getRrspContribution();
         double maxRRSP = (grossIncome * 0.18); //18%
+        if(maxRRSP < rrspContribution) {
+            rrsp = customer.getRrspContribution();
+        }
+        else if(maxRRSP> rrspContribution)
+        {
+            rrsp = maxRRSP;
+        }
 
         rrspCarryFwd = maxRRSP - rrsp ;
 
@@ -118,7 +125,7 @@ public class DataDisplayActivity extends AppCompatActivity {
         }
         else if ((temp >= 147667.01)&&(temp<= 210371)){
             federalTax = (temp * 0.29);//29%
-            temp = temp - 62703.99;
+            //temp = temp - 62703.99;
         }
         else if(temp >= 210371.01){
             federalTax = (temp * 0.33);//33%
@@ -133,7 +140,7 @@ public class DataDisplayActivity extends AppCompatActivity {
 
         if(temp <= 10582.00){
             provincialTax = 0;
-            temp = taxableIncome - 10582.00;
+            //temp = taxableIncome - 10582.00;
         }
         else if((temp >= 10582.01)&&(temp <= 43906 )){
             provincialTax = (temp * 0.0505); //5.05%
@@ -149,7 +156,7 @@ public class DataDisplayActivity extends AppCompatActivity {
         }
         else if ((temp >= 150000.01)&&(temp <= 220000)){
             provincialTax = (temp * 0.1216);//12.16%
-            temp = temp - 69999.99;
+            //temp = temp - 69999.99;
         }
         else if(temp >= 220000.01){
             provincialTax = (temp * 0.1316);//13.16%

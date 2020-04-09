@@ -17,7 +17,9 @@ import com.google.android.material.textfield.TextInputLayout;
 
 import java.util.Objects;
 import android.widget.DatePicker;
+import android.widget.RadioGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -41,6 +43,7 @@ public class PersonInfoActivity extends AppCompatActivity {
     private RadioButton rbtnMale;
     private RadioButton rbtnFemale;
     private RadioButton rbtnOther;
+    private RadioGroup rdGender;
 
     private   DatePickerDialog picker;
     final Calendar calendar = Calendar.getInstance();
@@ -56,6 +59,7 @@ public class PersonInfoActivity extends AppCompatActivity {
         edtFirstName = findViewById(R.id.txtFirstName);
         edtLastName = findViewById(R.id.txtLastName);
         edtSinNumber = findViewById(R.id.txtSinNumber);
+        rdGender = findViewById(R.id.rdGrpGender);
         rbtnMale = findViewById(R.id.rdMale);
         rbtnFemale = findViewById(R.id.rdFeMale);
         rbtnOther = findViewById(R.id.rdOther);
@@ -88,6 +92,20 @@ public class PersonInfoActivity extends AppCompatActivity {
                         }, year, month, day);
                 picker.show();
             }
+        });
+        rdGender.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+
+                if(i == R.id.rdMale){
+                    gender = rbtnMale.getText().toString();
+                }else if(i == R.id.rdFeMale){
+                    gender = rbtnFemale.getText().toString();
+                }else {
+                    gender = rbtnOther.getText().toString();
+                }
+            }
+
         });
 
         btnCalculate.setOnClickListener(new View.OnClickListener() {
@@ -156,6 +174,19 @@ public class PersonInfoActivity extends AppCompatActivity {
             startActivity(mIntent);
         }
     }
+    int calculateAge(String date){
+        Calendar dob = Calendar.getInstance();
+        Calendar today = Calendar.getInstance();
+
+        int age = today.get(Calendar.YEAR) - dob.get(Calendar.YEAR);
+        String agee= String.valueOf(age);
+        Toast.makeText(PersonInfoActivity.this, agee, Toast.LENGTH_SHORT).show();
+        if(today.get(Calendar.DAY_OF_MONTH) < dob.get(Calendar.DAY_OF_MONTH)){
+            age--;
+        }
+        return age;
+    }
+
 
 }
 

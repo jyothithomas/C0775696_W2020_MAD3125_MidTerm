@@ -10,6 +10,7 @@ import android.widget.TextView;
 import com.example.c0775696_w2020_mad3125_midterm.Models.CRACustomer;
 import com.example.c0775696_w2020_mad3125_midterm.R;
 
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 
@@ -37,7 +38,7 @@ public class DataDisplayActivity extends AppCompatActivity {
         lblFullName = findViewById(R.id.lblFullName);
         lblAge = findViewById(R.id.lblAge);
         lblGender = findViewById(R.id.lblGender);
-        lblTaxFilingDate = findViewById(R.id.txtTaxFillDate);
+        lblTaxFilingDate = findViewById(R.id.lblTaxFillDate);
         lblGrossIncome = findViewById(R.id.lblGrossIncome);
         lblRRSPContributed = findViewById(R.id.lblRrsContributed);
         lblRRSPCarryFwd = findViewById(R.id.lblCarryRrs);
@@ -48,10 +49,12 @@ public class DataDisplayActivity extends AppCompatActivity {
         lblTaxableIncome = findViewById(R.id.lblTotalTaxIncome);
         lblTaxPayed = findViewById(R.id.lblTaxPayed);
 
-        lblTaxFilingDate.setText(new StringBuilder()
-                // Month is 0 based, just add 1
-                .append(year).append(" ").append("-").append(month + 1).append("-")
-                .append(day));
+        SimpleDateFormat dfDate_day= new SimpleDateFormat("E, dd/MM/yyyy");
+        String dt="";
+        Calendar c = Calendar.getInstance();
+        dt = dfDate_day.format(c.getTime());
+        lblTaxFilingDate.setText(dt);
+
        //lblTaxFilingDate.setText(new StringBuilder().append(day).append(" ").append("-").append(month + 1).append("-").append(year));
 
         Intent mIntent = getIntent();

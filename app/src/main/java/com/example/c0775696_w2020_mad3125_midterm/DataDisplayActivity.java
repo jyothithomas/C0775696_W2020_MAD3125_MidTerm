@@ -25,7 +25,6 @@ public class DataDisplayActivity extends AppCompatActivity {
         setContentView(R.layout.activity_data_display);
         lblSin = findViewById(R.id.lblSinNumber);
         lblFullName = findViewById(R.id.lblFullName);
-        lblBirthDate = findViewById(R.id.lblBirthDate);
         lblAge = findViewById(R.id.lblAge);
         lblGender = findViewById(R.id.lblGender);
         lblTaxFilingDate = findViewById(R.id.txtTaxFillDate);
@@ -45,7 +44,7 @@ public class DataDisplayActivity extends AppCompatActivity {
         lblSin.setText( customer.getSinNumber());
         lblFullName.setText( customer.getFull_name());
         lblGender.setText(getIntent().getStringExtra("gender"));
-        lblTaxFilingDate.setText(getIntent().getStringExtra("date"));
+        lblAge.setText(getIntent().getStringExtra("curdate"));
         lblGrossIncome.setText(String.valueOf(customer.getGrossIncome()));
         lblRRSPContributed.setText(String.valueOf(customer.getRrspContribution()));
 

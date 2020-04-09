@@ -172,7 +172,7 @@ public class PersonInfoActivity extends AppCompatActivity {
             Intent mIntent = new Intent(PersonInfoActivity.this, DataDisplayActivity.class);
             mIntent.putExtra("CRACustomer", craCustomer);
             mIntent.putExtra("gender", gender);
-            mIntent.putExtra("date", getCurrentDate());
+            mIntent.putExtra("curdate", getCurrentDate());
             startActivity(mIntent);
         }
     }
@@ -190,17 +190,19 @@ public class PersonInfoActivity extends AppCompatActivity {
     }
     public String getCurrentDate() {
 
-        Time time = new Time();
-        time.setToNow();
-        time.month = time.month + 1;
-
-        String date = String.valueOf(time.year) + "-"
-                + String.valueOf(time.month) + "-"
-                + String.valueOf(time.monthDay);
-        return date;
+        StringBuilder todaydate=new StringBuilder();
+        Calendar today=Calendar.getInstance();
+        int age=today.get(Calendar.YEAR)-picker.getDatePicker().getYear();
+        if (today.get(Calendar.MONTH) < picker.getDatePicker().getYear()) {
+            age--;
+        } else if (today.get(Calendar.MONTH) == picker.getDatePicker().getYear()
+                && today.get(Calendar.DAY_OF_MONTH) < picker.getDatePicker().getYear()) {
+            age--;
+        }
+        //todaydate.append("Age: ");
+        todaydate.append(String.valueOf(age));
+        return todaydate.toString();
     }
-
-
-}
+    }
 
 

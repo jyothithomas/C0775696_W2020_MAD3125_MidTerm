@@ -46,9 +46,7 @@ public class DataDisplayActivity extends AppCompatActivity {
         lblTaxableIncome = findViewById(R.id.lblTotalTaxIncome);
         lblTaxPayed = findViewById(R.id.lblTaxPayed);
 
-       // lblTaxFilingDate.setText(new StringBuilder()
-              //  .append(day).append(" ").append("-").append(month + 1).append("-")
-               // .append(year));
+       lblTaxFilingDate.setText(new StringBuilder().append(day).append(" ").append("-").append(month + 1).append("-").append(year));
 
         Intent mIntent = getIntent();
         CRACustomer customer = mIntent.getParcelableExtra("CRACustomer");

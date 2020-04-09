@@ -141,6 +141,9 @@ public class PersonInfoActivity extends AppCompatActivity {
 
         if(!Flag)
         {
+
+            Double grossIncome = Double.parseDouble(edtGrossIncome.getText().toString());
+            Double rrspContribution = Double.parseDouble(edtRRSP.getText().toString());
             CRACustomer craCustomer = new CRACustomer(edtSinNumber.getText().toString(),
                     edtFirstName.getText().toString(),
                     edtLastName.getText().toString(),
@@ -149,9 +152,11 @@ public class PersonInfoActivity extends AppCompatActivity {
                     Double.parseDouble(edtRRSP.getText().toString()));
             Intent mIntent = new Intent(PersonInfoActivity.this, DataDisplayActivity.class);
             mIntent.putExtra("CRACustomer", craCustomer);
+            mIntent.putExtra("gender", gender);
             startActivity(mIntent);
         }
     }
+
 }
 
 

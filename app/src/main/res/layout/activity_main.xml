@@ -12,7 +12,6 @@
             android:layout_marginStart="1dp"
             android:layout_marginTop="1dp"
             android:layout_marginEnd="1dp"
-            android:layout_marginBottom="1dp"
             android:fillViewport="true"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -31,7 +30,7 @@
                     android:id="@+id/txtSinNumber"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
+                    android:layout_marginTop="60dp"
                     android:ems="10"
                     android:hint="Enter Sin Number "
                     android:inputType="textPersonName"
@@ -151,8 +150,8 @@
 
                 <ImageView
                     android:id="@+id/imageView"
-                    android:layout_width="349dp"
-                    android:layout_height="435dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
                     android:layout_below="@+id/btnCalculate"
                     android:layout_alignParentStart="true"
                     android:layout_alignParentEnd="true"

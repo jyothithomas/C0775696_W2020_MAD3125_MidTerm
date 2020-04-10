@@ -111,7 +111,7 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/txtTaxFillDate"
                     android:layout_marginTop="10dp"
-                    android:drawableLeft="@drawable/ic_action_name"
+                    android:drawableLeft="@drawable/ic_action_dollar"
                     android:ems="10"
                     android:hint="Enter Gross Income"
                     android:inputType="numberDecimal" />
@@ -121,7 +121,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/txtGrossIncome"
-                    android:drawableLeft="@drawable/ic_action_name"
+                    android:drawableLeft="@drawable/ic_action_dollar"
                     android:ems="10"
                     android:hint="Enter RRSP Contributed"
                     android:inputType="numberDecimal" />

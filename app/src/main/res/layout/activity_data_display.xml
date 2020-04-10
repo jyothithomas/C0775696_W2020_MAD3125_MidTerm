@@ -148,7 +148,7 @@
                     android:layout_height="wrap_content"
                     android:layout_column="2"
                     android:layout_marginLeft="10dp"
-                    android:drawableLeft="@drawable/ic_action_gender"
+                    android:drawableLeft="@drawable/ic_action_date"
                     android:padding="5dp"
                     android:textColor="@color/colorPrimaryDark"
                     android:textSize="18dp"

@@ -32,7 +32,7 @@ Login Screen with Date Picker
 ______________________________
 A date picker is poped up when we click the birth date.
 
-![Dob] (https://github.com/jyothithomas/C0775696_W2020_MAD3125_MidTerm/blob/master/ScreenShots/LoginDob.PNG)
+![Dob](https://github.com/jyothithomas/C0775696_W2020_MAD3125_MidTerm/blob/master/ScreenShots/LoginDob.PNG)
 ________________________________________________________________
 
 Login Screen Error message for Age < 18

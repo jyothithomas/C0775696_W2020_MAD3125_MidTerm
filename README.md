@@ -10,6 +10,7 @@ _____________
 Splash screen is loaded for 5 seconds.
 
 ![splash](https://github.com/jyothithomas/C0775696_W2020_MAD3125_MidTerm/blob/master/ScreenShots/splashcsreen.PNG)
+___________________________________________________________________________________________________________________
 
 Login Screen
 _____________
@@ -17,7 +18,7 @@ Login Screen appears and the following fields are displayed.
 Tax filed date is the current date
 
 ![Login1](https://github.com/jyothithomas/C0775696_W2020_MAD3125_MidTerm/blob/master/ScreenShots/LoginScreen1.PNG)
-
+_____________________________________________________________________________________________________________
 Login Screen Error messages
 ___________________________
 The following Text Field errors are displayed in all fields if a particular field is not filled.
@@ -25,12 +26,14 @@ SIN Validation is also handled.
 
 ![Login2](https://github.com/jyothithomas/C0775696_W2020_MAD3125_MidTerm/blob/master/ScreenShots/LoginSinValidation.PNG)
 ![Login3](https://github.com/jyothithomas/C0775696_W2020_MAD3125_MidTerm/blob/master/ScreenShots/Loginerror1.PNG)
+_________________________________________________
 
 Login Screen with Date Picker
 ______________________________
 A date picker is poped up when we click the birth date.
 
 ![Dob] (https://github.com/jyothithomas/C0775696_W2020_MAD3125_MidTerm/blob/master/ScreenShots/LoginDob.PNG)
+________________________________________________________________
 
 Login Screen Error message for Age < 18
 _________________________________________
@@ -38,18 +41,17 @@ _________________________________________
 The following Material dialog Box is appeared when the age of the person is less than 18.
 
 ![dobError](https://github.com/jyothithomas/C0775696_W2020_MAD3125_MidTerm/blob/master/ScreenShots/LoginDobError.PNG)
-
+____________________________________________________________
 
 Tax Calculated Display
 ______________________
 
 If every field entered is correct then it goes to the next intent showing all details with calculated tax amounts.
+If the rrsp carry forward is in negative then RRSP carry forward is displayed red in color.
 
 ![details1](https://github.com/jyothithomas/C0775696_W2020_MAD3125_MidTerm/blob/master/ScreenShots/DetailScreen1.PNG)
-
-if the rrsp carry forward is in negative then it is displayed red in color.
 ![details2](https://github.com/jyothithomas/C0775696_W2020_MAD3125_MidTerm/blob/master/ScreenShots/DetailScreen2.PNG)
-
+__________________________________________________________________________
 
 
 
